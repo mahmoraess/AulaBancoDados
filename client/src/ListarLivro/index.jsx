@@ -1,22 +1,22 @@
 import { useEffect, useState } from 'react';
 import '../globals.css';
 
-export default function ReadMatriculas() {
-  const [matriculas, setMatriculas] = useState([]);
+export default function ReadLivros() {
+  const [livros, setLivros] = useState([]);
 
 
   useEffect(() => {
-    const fetchMatriculas = async () => {
+    const fetchLivros = async () => {
       try {
         const response = await fetch('http://localhost:5000/matriculas');
         const data = await response.json();
-        setMatriculas(data);
+        setLivros(data);
       } catch (error) {
-        console.error('Erro ao buscar as matrículas:', error);
+        console.error('Erro ao buscar os livros:', error);
       }
     };
 
-    fetchMatriculas();
+    fetchLivros();
   }, []);
 
   const handleDelete = async (id) => {
@@ -26,26 +26,26 @@ export default function ReadMatriculas() {
       });
       if (response.ok) {
 
-        setMatriculas(matriculas.filter((matricula) => matricula._id !== id));
-        alert('Matrícula excluída com sucesso!');
+        setLivros(livros.filter((livro) => livro._id !== id));
+        alert('Livro excluído com sucesso!');
       } else {
-        alert('Erro ao excluir matrícula.');
+        alert('Erro ao excluir livro.');
       }
     } catch (error) {
-      console.error('Erro ao excluir matrícula:', error);
+      console.error('Erro ao excluir livro:', error);
     }
   };
 
   return (
     <div className='container'>
-      <h2>Lista de Matrículas</h2>
+      <h2>Lista de Livros</h2>
       <table  className="table-container" border="1">
         <thead>
           <tr>
-            <th>Código Matrícula</th>
-            <th>Nome do Aluno</th>
-            <th>Turma</th>
-            <th>Curso</th>
+            <th>Código Livro</th>
+            <th>Nome do Livro</th>
+            <th>Autor</th>
+            <th>Editora</th>
             <th>Ações</th>
           </tr>
         </thead>
