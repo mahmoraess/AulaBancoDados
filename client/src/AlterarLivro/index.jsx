@@ -14,7 +14,7 @@ export default function UpdateLivro() {
     const atualizacao = { livro, autor, editora };
 
     try {
-      const response = await fetch(`http://localhost:5000/matriculas/${id}`, {
+      const response = await fetch(`http://localhost:5000/livros/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -60,11 +60,11 @@ export default function UpdateLivro() {
       <input
         type="text"
         placeholder="Editora"
-        value={curso}
+        value={editora}
         onChange={(e) => setEditora(e.target.value)}
         required
       />
-      <button type="submit">Atualizar Livro<Livro></Livro></button>
+      <button type="submit">Atualizar Livro</button>
     </form>
     </div>
   );

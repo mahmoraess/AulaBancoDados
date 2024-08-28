@@ -8,7 +8,7 @@ export default function ReadLivros() {
   useEffect(() => {
     const fetchLivros = async () => {
       try {
-        const response = await fetch('http://localhost:5000/matriculas');
+        const response = await fetch('http://localhost:5000/livros');
         const data = await response.json();
         setLivros(data);
       } catch (error) {
@@ -21,7 +21,7 @@ export default function ReadLivros() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/matriculas/${id}`, {
+      const response = await fetch(`http://localhost:5000/livros/${id}`, {
         method: 'DELETE',
       });
       if (response.ok) {
@@ -50,14 +50,14 @@ export default function ReadLivros() {
           </tr>
         </thead>
         <tbody>
-          {matriculas.map((matricula) => (
-            <tr key={matricula._id}>
-              <td>{matricula._id}</td>
-              <td>{matricula.aluno}</td>
-              <td>{matricula.turma}</td>
-              <td>{matricula.curso}</td>
+          {livros.map((livro) => (
+            <tr key={livro._id}>
+              <td>{livro._id}</td>
+              <td>{livro.livro}</td>
+              <td>{livro.autor}</td>
+              <td>{livro.editora}</td>
               <td>
-                <button onClick={() => handleDelete(matricula._id)}>Excluir</button>
+                <button onClick={() => handleDelete(livro._id)}>Excluir</button>
               </td>
             </tr>
           ))}

@@ -14,7 +14,7 @@ export default function CreateLivro() {
     const novoLivro = { livro, autor, editora };
 
     try {
-      const response = await fetch('http://localhost:5000/matriculas', {
+      const response = await fetch('http://localhost:5000/livros', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

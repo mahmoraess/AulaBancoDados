@@ -2,7 +2,7 @@
 
 
 body{
-    font-family: "Inter", sans-serif;
+    font-family: Times, "Times New Roman", Georgia, serif;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
@@ -10,25 +10,28 @@ body{
     padding: 0;
 }
 body {
-    font-family: Arial, sans-serif;
+    font-family: Times, "Times New Roman", Georgia, serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
   h2 {
+    font-family: Times, "Times New Roman", Georgia, serif;
     text-align: center;
     margin-bottom: 20px;
   }
   
   .container {
+    background-image: url('https://i.pinimg.com/originals/23/e4/e8/23e4e87f2e2371f39e9c1aac6651f964.png');
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
     min-height: 100vh;
-    background-color: #f7f7f7;
+    color: rgb(188, 108, 172);
+    background-color: #ffd2f4;
   }
   
   .form-container {
@@ -46,14 +49,14 @@ body {
   .form-container input {
     padding: 10px;
     border-radius: 4px;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(188, 108, 172);
     font-size: 16px;
   }
   
   .form-container button {
     padding: 10px;
-    background-color: #007bff;
-    color: white;
+    background-color: #ffd2f4;
+    color: rgb(188, 108, 172);
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -62,7 +65,7 @@ body {
   }
   
   .form-container button:hover {
-    background-color: #0056b3;
+    background-color: #e873e2;
   }
   
   .table-container {
@@ -149,8 +152,8 @@ body {
     justify-content: center;
     width: 200px;
     height: 200px;
-    background-color: #409706b7;
-    color: white;
+    background-color: #ffd2f4;
+    color: rgb(188, 108, 172);
     border-radius: 8px;
     text-decoration: none;
     font-size: 18px;
@@ -160,5 +163,5 @@ body {
   }
   
   .card:hover {
-    background-color: #0056b3;
+    background-color: #e873e2;
   }
