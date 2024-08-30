@@ -3,7 +3,11 @@ import '../globals.css';
 
 export default function Home() {
     return (
-        <div className='container'>
+        <div class="imagem-container">
+            <div id="imagem">
+
+            </div>
+        <div className='container-imagem'>
             <h2>⋅˚₊‧ ୨୧ ‧₊˚ ⋅Livraria YM⋅˚₊‧ ୨୧ ‧₊˚ ⋅</h2>
             <div className="card-container">
                 <Link to="/livro/cadastrar" className="card">
@@ -16,6 +20,7 @@ export default function Home() {
                     <div>Editar Livro<livro></livro></div>
                 </Link>
             </div>
+        </div>
         </div>
     );
 }
